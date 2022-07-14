@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [first] = useState(1);
+  const getVal = useMemo(() => first, [first]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +20,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          {getVal}
         </a>
       </header>
     </div>
