@@ -4,7 +4,9 @@ import './App.css';
 
 function App() {
   const [first] = useState(1);
-  const getVal = useMemo(() => first, [first]);
+  const getVal = useMemo(() => {
+    return first;
+  }, [first]);
 
   return (
     <div className="App">
