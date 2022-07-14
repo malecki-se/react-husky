@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   const [first] = useState(1);
   const getVal = useMemo(() => {
-    return first;
+    return first + 1
   }, [first]);
 
   return (
